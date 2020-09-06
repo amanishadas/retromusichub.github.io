@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>musichub</title>
+	<meta charset="utf-8">
+  <meta  name="retro music hub" content="music">
+  <meta  name="keyword" content="music,retro music,music hub,online music">
+  <meta  name="viewport" content="wight=device-wight, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.theme.default.min.css">
+
+
+<style>
+*{ margin: 0px;
+      padding: 0px;
+    }
+html{height: 100%;
+}
+body{
+  height:100%;
+}
+.imglogo{
+  border-radius: 80%;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/*body {
+	background: #2E86DE;
+}*/
+
+.col-carousel {
+	margin: 70px 0;
+}
+
+/* owl nav */
+.owl-prev span, .owl-next span {
+	color: #FFF;
+}
+
+.owl-prev span:hover, 
+.owl-next span:hover {
+	color: #8199A3;
+}
+
+.owl-prev, .owl-next {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+.owl-prev {
+	left: 7px;
+}
+
+.owl-next {
+	right: 7px;
+}
+
+/* removing blue outline from buttons */
+button:focus, button:active {
+   outline: none;
+}
+/*
+.navclass{
+  width: 1350px;}*/
+.cardimg:hover{
+opacity:70%;
+transform:scale(1.03);
+transition: 1s;
+}
+.owldiv{
+	margin-top: -15px !important;
+	/* background-image: linear-gradient(to right, #feada6,#f5efef); */
+}
+.owldiv2{
+	margin-right: 0px !important;
+}
+.owlimg{
+	height: 200px !important;
+	width: 400px !important;
+}
+footer {
+  background: #16222A;
+  background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+  background: linear-gradient(59deg, #3A6073, #16222A);
+  color: white;
+  margin-top:100px;
+}
+.footer{
+	width:1350px !important;
+	margin-right:90px !important;
+	margin-left: -13px !important;
+	padding-left: 0px !important; 
+	padding-right:0px !important;  
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark logonav">
+  <a class="navbar-brand" href="#">
+    <img class="imglogo" src="logoo.png" width="150" height="90" alt="" loading="lazy">
+  </a>
+</nav>
+<!-- <br>
+<br>
+<br>
+<br>
+<br> -->	
+<div class="container divmain ">
+<div id="mySidenav" class="sidenav div1 fixed-top">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="index.html">Home</a>
+  <a href="#">New</a>
+  <a href="#">Playlist</a>
+</div>
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light navclass">
+        <a class="navbar-brand" href="#">Music Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link dropdown-toggle" href="#" tabindex="-1" aria-disabled="true">Explore</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+</nav>
+ -->
+ <div class="container owldiv">
+	<div class="row align-items-center">
+		<div class="col-12 col-carousel">
+			<div class="owl-carousel carousel-main owldiv2">
+				<div><img class="owlimg" src="nfilm1.jpg"></div>
+				<div><img class="owlimg" src="nfilm2.jpg"></div>
+				<div><img class="owlimg" src="nfilm3.jpg"></div>
+				<div><img class="owlimg" src="nfilm4.jpg"></div>
+				<div><img class="owlimg" src="nfilm5.jpg"></div>
+				<div><img class="owlimg" src="nfilm6.jpg"></div>
+				<div><img class="owlimg" src="nfilm7.jpg"></div>
+				<div><img class="owlimg" src="nfilm8.jpg"></div>
+				<div><img class="owlimg" src="nfilm9.jpg"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- card again -->
+
+<h1 class="h1text" style="color: purple; font-family: Anton;">Browse</h1>
+<h5 class="h4text" style="color: purple; font-family: helvetica;" >GENRES & MOODS</h5>
+
+  <div class="row row-cols-1 row-cols-sm-4">
+  <div class="col mb-4">
+    <div class="card">
+      <img src="mood.jpeg" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Mood</h5>
+         <a class="btn btn-primary" href="listofrestrunt.html" role="button">Explore</a>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="romance.jfif" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Romantic songs</h5>
+         <a class="btn btn-primary" onclick="myFunction()" href="index2.html" role="button">Explore</a>
+       </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="travel.jpg" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Travel</h5>
+        <a class="btn btn-primary" href="listofrestrunt.html" role="button">Explore</a>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="gym.jfif" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Gym</h5>
+         <a class="btn btn-primary" href="listofrestrunt.html" role="button">Explore</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+   
+       <!-- card2 -->
+
+<div class="row row-cols-1 row-cols-sm-4">
+  <div class="col mb-4">
+    <div class="card">
+      <img src="rock.jpg" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Rock Music</h5>
+         <a class="btn btn-primary" href="listofrestrunt.html" role="button">Explore</a>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="pop.jpg" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pop music</h5>
+         <a class="btn btn-primary" href="listofrestrunt.html" role="button">Explore</a>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="card3.jpg" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Broken</h5>
+         <a class="btn btn-primary" href="listofrestrunt.html" role="button">Explore</a>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="card1.jpg" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">At home</h5>
+         <a class="btn btn-primary" href="listofrestrunt.html" role="button">Explore</a>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="sleepy.jpg" class="card-img-top cardimg" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sleep Time</h5>
+         <a class="btn btn-primary" href="listofrestrunt.html" role="button">Explore</a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+</div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+  <div style="background-color: #6351ce;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Retro Music Hub</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Here you can use listen online music using less amount of data.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Browse</a>
+        </p>
+        <p>
+          <a href="#!">playlist</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Your Account</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> Kolkata India, pin 700074</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> amanishadas139@gmail.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> +917003 9829</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> +9156789321</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> retromusichub.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script>
+function myFunction() {
+  alert("Allow notification!");
+}
+</script>
+<script>
+
+$('.carousel-main').owlCarousel({
+	items: 3,
+	loop: true,
+	autoplay: true,
+	autoplayTimeout: 1500,
+	margin: 10,
+	nav: true,
+	dots: true,
+	navText: ['<span class="fas fa-chevron-left fa-2x"></span>','<span class="fas fa-chevron-right fa-2x"></span>'],
+})
+	</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</html>

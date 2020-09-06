@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>retromusichub</title>
+
+ <meta charset="utf-8">
+  <meta  name="retro music hub" content="music">
+  <meta  name="keyword" content="music,retro music,music hub,online music">
+  <meta  name="viewport" content="wight=device-wight, initial-scale=1.0">
+
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/owl.carousel.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.theme.default.min.css">
+
+<style>
+    *{ margin: 0px;
+      padding: 0px;
+    }
+html{height: 100%;
+}
+body{
+  height:100%;
+}
+/*.hero-image {
+  background-image: url("hero1.jpg");
+  background-color: #cccccc;
+  width: 1350px;
+  height:300px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+   transform: translate(00%, 00%);
+ }
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}*/
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("love.jfif");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+/*.bg{
+  /* The image used *
+  background-image: url("back1.jpeg");
+
+   Full height 
+  height: 100%; 
+
+   Center and scale the image nicely 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+/*margin: 0px !important;
+padding: 0px !important;*/
+
+	/*margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-right: 0px !important;
+	padding-left: 0px !important; 
+	background-image: linear-gradient(to right, #feada6,#f5efef);*/
+.bg{
+	padding-left: 15px !important;
+	padding-right: 5px !important;
+	margin-right: 0px !important;
+	margin-left:-4px !important;
+}
+footer {
+  background: #16222A;
+  background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+  background: linear-gradient(59deg, #3A6073, #16222A);
+  color: white;
+  margin-top:100px;
+}
+.footer{
+	width:1350px !important;
+	margin-right:90px !important;
+	margin-left: -13px !important;
+	padding-left: 0px !important; 
+	padding-right:0px !important;  
+
+}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navclass">
+        <a class="navbar-brand" href="">Browser</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Long in <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">sign in</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">playlist</a>
+                <a class="dropdown-item" href="#">History</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Most played</a>
+                <a class="dropdown-item" href="index.html">Home</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link dropdown-toggle" href="#" tabindex="-1" aria-disabled="true">Explore</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+</nav>
+<br>
+<br>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h2>feel your mood with</h2>
+  <h1 style="font-size:50px">Retro Music Collection</h1>
+<!--   <p>And I'm a Photographer</p> -->
+</div>
+<br>
+<!--  <div class="hero-image bg-image">
+  <div class="hero-text bg-text">
+    <h1 style="font-size:50px">LATEST FASHION</h1>
+    <h3>And IT's A FASHION GUIDE FOR YOU</h3>
+     <a href="file:///C:/Users/hp/Desktop/my%20web%20sites/New%20folder/project1.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Explore</a>
+  </div>
+</div>
+ -->
+ <div class="container bg">
+ 
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="bastu.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Tomake chhuye dilm</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <audio controls>
+ 	    <source src="http://tollysong.in/siteuploads/files/sfd21/10209/Tomake%20Chuye%20Dilam%20(Female%20Version)(TollySong.In).mp3" type="audio/mpeg">
+ 		your browser does not support the audio element.
+       </audio>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="amaro.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Amaro porano jaha chay</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <audio controls>
+ 	    <source src="http://tollysong.in/siteuploads/files/sfd33/16080/Amaro%20Porano%20Jaha%20Chai(RabindraSangeet)%20-Arijit%20Singh(TollySong.In).mp3" type="audio/mpeg">
+ 		your browser does not support the audio element.
+       </audio>
+      </div>
+    </div>
+  </div>
+</div>
+    <h5 class="h4text" style="color: purple; font-family: helvetica;" >Hindi Romantic Songs</h5>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="dill.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       <audio controls>
+ 	    <source src="http://tollysong.in/siteuploads/files/sfd60/29847/Main%20Tumhara%20(Dil%20Bechara)%20Hriday%20Gattani,%20Jonita%20Gandhi(TollySong.In).mp3" type="audio/mpeg">
+ 		your browser does not support the audio element.
+       </audio>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="thesky.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+         <audio controls>
+ 	    <source src="http://tollysong.in/siteuploads/files/sfd55/27471/Dil%20Hi%20Toh%20Hai%20(The%20Sky%20Is%20Pink)(TollySong.In).mp3" type="audio/mpeg">
+ 		your browser does not support the audio element.
+       </audio>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark footer">
+
+  <div style="background-color: #6351ce;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Retro Music Hub</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Here you can use listen online music using less amount of data..</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Browse</a>
+        </p>
+        <p>
+          <a href="#!">playlist</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Your Account</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> Kolkata India, pin 700074</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> amanishadas139@gmail.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i>  +917003 9829</p>
+        <p>
+          <i class="fas fa-print mr-3"></i>  +91567 89321</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/">  retromusichub.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</html>
